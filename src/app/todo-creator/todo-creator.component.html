@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <input type='text' class='form-control' name="name" placeholder="Name" [(ngModel)]="name">
+  </div>
+  <div class="form-group">
+    <input type='text' class='form-control' name="description" placeholder="Description" [(ngModel)]="description">
+  </div>
+  <button class="btn btn-primary" 
+    (click)="onAddTodo()" 
+    [class.disabled]="!name || !description">Add</button>
+</form>
